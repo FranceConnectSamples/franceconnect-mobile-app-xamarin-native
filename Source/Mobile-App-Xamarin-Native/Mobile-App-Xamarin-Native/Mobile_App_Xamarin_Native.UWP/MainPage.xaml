@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="Mobile_App_Xamarin_Native.UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mobile_App_Xamarin_Native.UWP"
+    xmlns:controls="using:Mobile_App_Xamarin_Native.UWP.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}">
+            <ToggleButton IsChecked="{x:Bind PageViewModel.IsHamburgerChecked, Mode=TwoWay}"
+                          Style="{ThemeResource Hamburger}"
+                          VerticalAlignment="Top">
+                <ToggleButton.Content>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" />
+                </ToggleButton.Content>
+            </ToggleButton>
+            <controls:PageHeader Text="FranceConnect Xamarin" />
+        </StackPanel>
+
+        <SplitView Grid.Row="1" DisplayMode="Overlay" IsPaneOpen="{x:Bind PageViewModel.IsPaneOpen, Mode=TwoWay}">
+            <SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel>
+                        <Button Style="{ThemeResource IconButton}"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Left"
+                                Visibility="{x:Bind PageViewModel.IsAuthenticated, Mode=OneWay}"
+                                Click="PivotIdentityButton_Click">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE779;" />
+                                    <TextBlock Text="Identité pivot"
+                                           Style="{ThemeResource BodyTextBlockStyle}"
+                                           Margin="20,0,0,0" />
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{ThemeResource IconButton}"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Left"
+                                Visibility="{x:Bind PageViewModel.IsAuthenticated, Mode=OneWay}"
+                                Click="DgfipResourceButton_Click">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A5;" />
+                                    <TextBlock Text="Données GDFIP"
+                                           Style="{ThemeResource BodyTextBlockStyle}"
+                                           Margin="20,0,0,0" />
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                        <Button Style="{ThemeResource IconButton}"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Left"
+                                Visibility="{x:Bind PageViewModel.IsAuthenticated, Mode=OneWay}"
+                                Click="CustomResourceButton_Click">
+                            <Button.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8A5;" />
+                                    <TextBlock Text="Données Custom"
+                                           Style="{ThemeResource BodyTextBlockStyle}"
+                                           Margin="20,0,0,0" />
+                                </StackPanel>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <Border Height="1" Background="{ThemeResource SystemControlForegroundBaseLowBrush}" Margin="10,5" />
+                        <Button Style="{ThemeResource IconButton}"
+                                Content="{x:Bind PageViewModel.LoginLogoutLabel, Mode=OneWay}"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Left"
+                                Click="LoginLogoutButton_Click">
+                        </Button>
+                    </StackPanel>
+
+                </Grid>
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+</Page>

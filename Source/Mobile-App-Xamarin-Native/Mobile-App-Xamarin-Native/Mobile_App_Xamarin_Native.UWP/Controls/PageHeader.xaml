@@ -1,0 +1,31 @@
+﻿<UserControl
+    x:Class="Mobile_App_Xamarin_Native.UWP.Controls.PageHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mobile_App_Xamarin_Native.UWP.Controls"
+    xmlns:converters="using:Mobile_App_Xamarin_Native.UWP.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    VerticalAlignment="Top"
+    VerticalContentAlignment="Center"
+    HorizontalAlignment="Stretch"
+    HorizontalContentAlignment="Stretch"
+    Height="48"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <converters:ToUpperConverter x:Name="ToUpperConverter" />
+    </UserControl.Resources>
+
+    <Border Background="{x:Bind Background}">
+        <TextBlock Text="{x:Bind Text, Mode=OneWay, Converter={StaticResource ToUpperConverter}}"
+                   FontWeight="Bold"
+                   TextWrapping="NoWrap"
+                   CharacterSpacing="75"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="12, 14, 12, 14" />
+    </Border>
+</UserControl>

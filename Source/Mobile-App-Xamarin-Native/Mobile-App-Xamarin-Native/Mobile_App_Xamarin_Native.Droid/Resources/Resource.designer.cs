@@ -45,7 +45,16 @@ namespace Mobile_App_Xamarin_Native.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ic_drawer = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int ic_fc_logo = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int ic_fc_logo_with_label = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Icon = 2130837507;
 			
 			static Drawable()
 			{
@@ -60,8 +69,65 @@ namespace Mobile_App_Xamarin_Native.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050010
+			public const int birthdateTextView = 2131034128;
+			
+			// aapt resource value: 0x7f050007
+			public const int content_frame = 2131034119;
+			
+			// aapt resource value: 0x7f05000b
+			public const int customResourceButton = 2131034123;
+			
+			// aapt resource value: 0x7f05000a
+			public const int dgfipResourceButton = 2131034122;
+			
+			// aapt resource value: 0x7f050006
+			public const int drawer_layout = 2131034118;
+			
+			// aapt resource value: 0x7f05000e
+			public const int emailTextView = 2131034126;
+			
+			// aapt resource value: 0x7f050011
+			public const int firstnameTextView = 2131034129;
+			
+			// aapt resource value: 0x7f05000f
+			public const int genderTextView = 2131034127;
+			
+			// aapt resource value: 0x7f05000d
+			public const int idTextView = 2131034125;
+			
+			// aapt resource value: 0x7f050012
+			public const int lastnameTextView = 2131034130;
+			
+			// aapt resource value: 0x7f050008
+			public const int left_drawer = 2131034120;
+			
+			// aapt resource value: 0x7f05000c
+			public const int loginLogoutButton = 2131034124;
+			
+			// aapt resource value: 0x7f050005
+			public const int nbpacTextView = 2131034117;
+			
+			// aapt resource value: 0x7f050004
+			public const int nbpartTextView = 2131034116;
+			
+			// aapt resource value: 0x7f050013
+			public const int oidcWebView = 2131034131;
+			
+			// aapt resource value: 0x7f050009
+			public const int pivotIdentityButton = 2131034121;
+			
+			// aapt resource value: 0x7f050002
+			public const int rfrTextView = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int sitfamTextView = 2131034115;
+			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int valueOneTextView = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int valueTwoTextView = 2131034113;
 			
 			static Id()
 			{
@@ -77,7 +143,19 @@ namespace Mobile_App_Xamarin_Native.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int activity_custom_resource = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int activity_dgfip_resource = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int activity_main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int activity_pivot_identity = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int activity_web_view = 2130903044;
 			
 			static Layout()
 			{
@@ -92,11 +170,68 @@ namespace Mobile_App_Xamarin_Native.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			public const int app_name = 2130968576;
+			
+			// aapt resource value: 0x7f040005
+			public const int consent = 2130968581;
+			
+			// aapt resource value: 0x7f040008
+			public const int custom = 2130968584;
+			
+			// aapt resource value: 0x7f040013
+			public const int custom_value_one = 2130968595;
+			
+			// aapt resource value: 0x7f040014
+			public const int custom_value_two = 2130968596;
+			
+			// aapt resource value: 0x7f040007
+			public const int dgfip = 2130968583;
+			
+			// aapt resource value: 0x7f040012
+			public const int dgfip_nbpac = 2130968594;
+			
+			// aapt resource value: 0x7f040011
+			public const int dgfip_nbpart = 2130968593;
+			
+			// aapt resource value: 0x7f04000f
+			public const int dgfip_rfr = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int dgfip_sitfam = 2130968592;
+			
+			// aapt resource value: 0x7f040002
+			public const int drawer_close = 2130968578;
+			
+			// aapt resource value: 0x7f040001
+			public const int drawer_open = 2130968577;
+			
+			// aapt resource value: 0x7f040003
+			public const int login = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int logout = 2130968580;
+			
+			// aapt resource value: 0x7f040006
+			public const int pivot_identity = 2130968582;
+			
+			// aapt resource value: 0x7f04000c
+			public const int pivot_identity_birthdate = 2130968588;
+			
+			// aapt resource value: 0x7f04000a
+			public const int pivot_identity_email = 2130968586;
+			
+			// aapt resource value: 0x7f04000d
+			public const int pivot_identity_firstname = 2130968589;
+			
+			// aapt resource value: 0x7f04000b
+			public const int pivot_identity_gender = 2130968587;
+			
+			// aapt resource value: 0x7f040009
+			public const int pivot_identity_id = 2130968585;
+			
+			// aapt resource value: 0x7f04000e
+			public const int pivot_identity_lastname = 2130968590;
 			
 			static String()
 			{

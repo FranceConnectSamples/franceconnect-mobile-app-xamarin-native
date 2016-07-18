@@ -1,5 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">Mobile_App_Xamarin_Native.Droid</string>
+  <!-- application -->
+	<string name="app_name">FranceConnect Xamarin</string>
+  <!-- drawer -->
+  <string name="drawer_open">Open navigation drawer</string>
+  <string name="drawer_close">Close navigation drawer</string>
+  <!-- buttons -->
+  <string name="login">Connexion</string>
+  <string name="logout">Se déconnecter</string>
+  <string name="consent">Consentement</string>
+  <string name="pivot_identity">Identité pivot</string>
+  <string name="dgfip">DGFIP</string>
+  <string name="custom">Custom</string>
+  <!-- labels -->
+  <string name="pivot_identity_id">Id</string>
+  <string name="pivot_identity_email">Email</string>
+  <string name="pivot_identity_gender">Gender</string>
+  <string name="pivot_identity_birthdate">Birthdate</string>
+  <string name="pivot_identity_firstname">Firstname</string>
+  <string name="pivot_identity_lastname">Lastname</string>
+  <string name="dgfip_rfr">Revenu fiscal de référence</string>
+  <string name="dgfip_sitfam">Situation familiale</string>
+  <string name="dgfip_nbpart">Nombre de parts</string>
+  <string name="dgfip_nbpac">Nombre de personnes à charge</string>
+  <string name="custom_value_one">Valeur 1</string>
+  <string name="custom_value_two">Valeur 2</string>
 </resources>

@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Mobile_App_Xamarin_Native.UWP.Views.UserPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mobile_App_Xamarin_Native.UWP.Views"
+    xmlns:controls="using:Mobile_App_Xamarin_Native.UWP.Controls"
+    xmlns:converters="using:Mobile_App_Xamarin_Native.UWP.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <converters:ToLongDateConverter x:Name="ToLongDateConverter" />
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <controls:PageHeader Text="Identité pivot" Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" />
+        <StackPanel Grid.Row="1" Padding="12,0">
+            <TextBlock Text="Id" Margin="0,20,0,0" FontSize="18" />
+            <TextBlock Text="{x:Bind PageViewModel.User.Id, Mode=OneWay}" Margin="0,8,0,0" />
+            <TextBlock Text="Email" Margin="0,20,0,0" FontSize="18" />
+            <TextBlock Text="{x:Bind PageViewModel.User.Email, Mode=OneWay}" Margin="0,8,0,0" />
+            <TextBlock Text="Gender" Margin="0,20,0,0" FontSize="18" />
+            <TextBlock Text="{x:Bind PageViewModel.User.Gender, Mode=OneWay}" Margin="0,8,0,0" />
+            <TextBlock Text="Birthdate" Margin="0,20,0,0" FontSize="18" />
+            <TextBlock Text="{x:Bind PageViewModel.User.Birthdate, Mode=OneWay, Converter={StaticResource ToLongDateConverter}}" Margin="0,8,0,0" />
+            <TextBlock Text="Firstname" Margin="0,20,0,0" FontSize="18" />
+            <TextBlock Text="{x:Bind PageViewModel.User.Firstname, Mode=OneWay}" Margin="0,8,0,0" />
+            <TextBlock Text="Lastname" Margin="0,20,0,0" FontSize="18" />
+            <TextBlock Text="{x:Bind PageViewModel.User.Lastname, Mode=OneWay}" Margin="0,8,0,0" />
+        </StackPanel>
+    </Grid>
+</Page>
