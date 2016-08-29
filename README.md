@@ -4,5 +4,5 @@ Ce projet exemple met à disposition un canevas d’application mobile en [Xamar
 
 Plateformes supportées :
 - Android
-- iOS (très prochainement disponible)
+- iOS
 - Windows 10 (universelle)
