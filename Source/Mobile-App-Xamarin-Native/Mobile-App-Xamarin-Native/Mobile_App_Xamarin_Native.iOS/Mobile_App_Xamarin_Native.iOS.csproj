@@ -34,6 +34,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -57,8 +58,10 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchProfiling>true</MtouchProfiling>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: charles.de.vandiere@outlook.fr (328KWVTK73)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <SignAssembly>false</SignAssembly>
+    <CodesignProvision>c92eb5b2-298e-4334-954d-613e81999428</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -69,6 +72,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Mobile_App_Xamarin_Native\Mobile_App_Xamarin_Native.csproj">
       <Name>Mobile_App_Xamarin_Native</Name>
+      <Project>{38FD12EC-DDBB-4DC7-967D-F4B1B57E902C}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -139,10 +143,44 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="Views\StartViewController.cs" />
+    <Compile Include="Views\StartViewController.designer.cs">
+      <DependentUpon>StartViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\WebViewController.cs" />
+    <Compile Include="Views\WebViewController.designer.cs">
+      <DependentUpon>WebViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeViewController.cs" />
+    <Compile Include="Views\HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PivotIdentityViewController.cs" />
+    <Compile Include="Views\PivotIdentityViewController.designer.cs">
+      <DependentUpon>PivotIdentityViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DgfipResourceViewController.cs" />
+    <Compile Include="Views\DgfipResourceViewController.designer.cs">
+      <DependentUpon>DgfipResourceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomResourceViewController.cs" />
+    <Compile Include="Views\CustomResourceViewController.designer.cs">
+      <DependentUpon>CustomResourceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CookieHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\data.png" />
+    <BundleResource Include="Resources\data%402x.png" />
+    <BundleResource Include="Resources\data%403x.png" />
+    <BundleResource Include="Resources\identity.png" />
+    <BundleResource Include="Resources\identity%402x.png" />
+    <BundleResource Include="Resources\identity%403x.png" />
+    <BundleResource Include="Resources\fc_logo_alt1_v2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
